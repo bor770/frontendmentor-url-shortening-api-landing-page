@@ -14,3 +14,7 @@ export const setLinks = createAction(
   `[Shorten] Set Links`,
   props<{ links: Links }>()
 );
+export const shortenLink = createAction(
+  `[Shorten] Shorten Link`,
+  props<{ originalLink: string }>()
+);

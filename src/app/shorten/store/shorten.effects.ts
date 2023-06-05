@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
   Actions,
@@ -7,14 +8,17 @@ import {
   rootEffectsInit,
 } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { map, tap } from 'rxjs';
+import { catchError, map, of, switchMap, tap } from 'rxjs';
 
+import { APIResponse } from '../shorten.model';
 import * as fromRoot from '../../store/root.reducer';
 import * as ShortenActions from './shorten.actions';
 
 @Injectable()
 export class ShortenEffects {
-  fetchLinks = createEffect(() => {
+  apiLink = `api.shrtco.de/v2/shorten`;
+
+  getLinks = createEffect(() => {
     return this.actions$.pipe(
       ofType(rootEffectsInit),
       map(() =>
@@ -25,7 +29,30 @@ export class ShortenEffects {
     );
   });
 
-  addLink = createEffect(
+  shortenLink = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(ShortenActions.shortenLink),
+      switchMap((shortenLinkAction) =>
+        this.http
+          .get<APIResponse>(`https://${this.apiLink}`, {
+            params: { url: shortenLinkAction.originalLink },
+          })
+          .pipe(
+            map((data) =>
+              ShortenActions.addLink({
+                link: {
+                  originalLink: shortenLinkAction.originalLink,
+                  shortLink: data.result.full_short_link,
+                },
+              })
+            ),
+            catchError(() => of())
+          )
+      )
+    );
+  });
+
+  storeLinks = createEffect(
     () => {
       return this.actions$.pipe(
         ofType(ShortenActions.addLink),
@@ -36,16 +63,9 @@ export class ShortenEffects {
     { dispatch: false }
   );
 
-  copyLink = createEffect(
-    () => {
-      return this.actions$.pipe(
-        ofType(ShortenActions.copyLink),
-        concatLatestFrom(() => this.store.select(fromRoot.selectShortenCopied)),
-        tap
-      );
-    },
-    { dispatch: false }
-  );
-
-  constructor(private actions$: Actions, private store: Store) {}
+  constructor(
+    private actions$: Actions,
+    private http: HttpClient,
+    private store: Store
+  ) {}
 }
