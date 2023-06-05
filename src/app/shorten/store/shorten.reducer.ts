@@ -8,7 +8,7 @@ export interface State {
   links: Links;
 }
 
-const initalState: State = { copied: null, links: null };
+const initalState: State = { copied: null, links: [] };
 
 export const shortenReducer = createReducer(
   initalState,
@@ -17,12 +17,12 @@ export const shortenReducer = createReducer(
     (state, { link }): State => ({ ...state, links: [...state.links, link] })
   ),
   on(
-    ShortenActions.copyLink,
-    (state, { index }): State => ({ ...state, copied: index })
+    ShortenActions.setLinks,
+    (state, { links }): State => ({ ...state, links: [...(links ?? [])] })
   ),
   on(
-    ShortenActions.setLinks,
-    (state, { links }): State => ({ ...state, links: { ...links } })
+    ShortenActions.linkCopied,
+    (state, { index }): State => ({ ...state, copied: index })
   )
 );
 

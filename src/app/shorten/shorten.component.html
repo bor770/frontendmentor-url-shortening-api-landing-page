@@ -1,1 +1,32 @@
-<p>shorten works!</p>
+<ng-container
+  *ngIf="{ copied: copied$ | async, links: links$ | async } as observables"
+>
+  <form [formGroup]="form" (ngSubmit)="onShorten()">
+    <section class="shorten">
+      <mat-form-field hideRequiredMarker appearance="outline">
+        <mat-label>Shorten a link here...</mat-label>
+        <input matInput formControlName="originalLink" type="text" />
+        <mat-error>Please add a link</mat-error>
+      </mat-form-field>
+      <button extended mat-fab>Shorten It!</button>
+    </section>
+    <section class="links">
+      <ul>
+        <li *ngFor="let link of observables.links; let i = index">
+          <span class="original">{{ link.originalLink }}</span>
+          <mat-divider></mat-divider>
+          <span class="short">{{ link.shortLink }}</span>
+          <button
+            mat-flat-button
+            type="button"
+            [cdkCopyToClipboard]="link.shortLink"
+            [disabled]="i === observables.copied"
+            (click)="onCopy(i)"
+          >
+            {{ i === observables.copied ? "Copied" : "Copy" }}
+          </button>
+        </li>
+      </ul>
+    </section>
+  </form>
+</ng-container>

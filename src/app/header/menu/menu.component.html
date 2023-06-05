@@ -2,10 +2,12 @@
   <mat-icon>menu</mat-icon>
 </button>
 <mat-menu #menu xPosition="before" class="men">
-  <button mat-menu-item>Features</button>
-  <button mat-menu-item>Pricing</button>
-  <button mat-menu-item>Resources</button>
-  <mat-divider></mat-divider>
-  <button mat-menu-item>Login</button>
-  <button extended mat-fab>Sign Up</button>
+  <ng-template matMenuContent>
+    <button mat-menu-item>Features</button>
+    <button mat-menu-item>Pricing</button>
+    <button mat-menu-item>Resources</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item>Login</button>
+    <a extended mat-fab>Sign Up</a>
+  </ng-template>
 </mat-menu>

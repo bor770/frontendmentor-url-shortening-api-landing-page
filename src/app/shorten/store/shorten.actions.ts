@@ -6,10 +6,6 @@ export const addLink = createAction(
   `[Shorten] Add Link`,
   props<{ link: Link }>()
 );
-export const copyLink = createAction(
-  `[Shorten] Copy Link`,
-  props<{ index: number }>()
-);
 export const setLinks = createAction(
   `[Shorten] Set Links`,
   props<{ links: Links }>()
@@ -17,4 +13,8 @@ export const setLinks = createAction(
 export const shortenLink = createAction(
   `[Shorten] Shorten Link`,
   props<{ originalLink: string }>()
+);
+export const linkCopied = createAction(
+  `[Shorten] Copy Link`,
+  props<{ index: number }>()
 );
