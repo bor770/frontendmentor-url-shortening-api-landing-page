@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
+  imports: [CommonModule, MatButtonModule],
   selector: 'app-main-title',
   standalone: true,
-  imports: [CommonModule],
+  styleUrls: ['./main-title.component.css'],
   templateUrl: './main-title.component.html',
-  styleUrls: ['./main-title.component.css']
 })
-export class MainTitleComponent {
-
-}
+export class MainTitleComponent {}
