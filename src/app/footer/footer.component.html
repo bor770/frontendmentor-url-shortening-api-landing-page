@@ -1,1 +1,18 @@
-<p>footer works!</p>
+<img src="../../assets/images/logo.svg" alt="Logo" />
+<ul>
+  <li *ngFor="let linksSection of links">
+    <span>{{ linksSection.title }}</span>
+    <ul>
+      <li *ngFor="let link of linksSection.links">
+        <a>{{ link }}</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let icon of socialIcons">
+    <a mat-icon-button>
+      <mat-icon [svgIcon]="icon"></mat-icon>
+    </a>
+  </li>
+</ul>

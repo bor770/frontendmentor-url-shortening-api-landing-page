@@ -1,0 +1,10 @@
+<img
+  [src]="
+    '../../../assets/images/icon-' +
+    feature.title.toLowerCase().split(' ').join('-') +
+    '.svg'
+  "
+  [alt]="feature.title"
+/>
+<h3>{{ feature.title }}</h3>
+<p>{{ feature.content }}</p>

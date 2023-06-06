@@ -1,13 +1,35 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { DomSanitizer } from '@angular/platform-browser';
+
+import { links, socialIcons } from './links';
 
 @Component({
+  imports: [CommonModule, MatButtonModule, MatIconModule],
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  styleUrls: ['./footer.component.css'],
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+  links = links;
+  socialIcons = socialIcons;
 
+  constructor(
+    private iconRegistry: MatIconRegistry,
+    private sanitizer: DomSanitizer
+  ) {}
+
+  ngOnInit(): void {
+    for (const icon of this.socialIcons) {
+      this.iconRegistry.addSvgIcon(
+        icon,
+        this.sanitizer.bypassSecurityTrustResourceUrl(
+          `../../assets/images/icon-${icon}.svg`
+        )
+      );
+    }
+  }
 }

@@ -1,6 +1,6 @@
-import { Features } from './features.model';
+export type Feature = { content: string; title: string };
 
-export const data: Features = [
+export const features: Feature[] = [
   {
     content: `Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.`,
     title: `Brand Recognition`,
