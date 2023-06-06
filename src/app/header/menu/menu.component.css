@@ -1,3 +1,9 @@
-.men {
-  background-color: red !important;
+a,
+button {
+  font: inherit;
+  font-weight: 700;
+}
+
+a {
+  background-color: var(--color-primary-cyan);
 }

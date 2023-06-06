@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [CommonModule, MatButtonModule],
   selector: 'app-main-title',
   standalone: true,
-  styleUrls: ['./main-title.component.css'],
+  styleUrls: ['./main-title.component.css', `../shared/styles/styles.css`],
   templateUrl: './main-title.component.html',
 })
 export class MainTitleComponent {}
