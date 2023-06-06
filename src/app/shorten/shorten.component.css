@@ -37,6 +37,10 @@ li {
   text-align: left;
 }
 
+li:last-child {
+  margin-bottom: 0.5rem;
+}
+
 .original,
 .short {
   align-items: center;

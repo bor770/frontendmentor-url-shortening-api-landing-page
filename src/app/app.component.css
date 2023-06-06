@@ -4,6 +4,6 @@ header {
 }
 
 .middle {
-  background-color: var(--color-neutral-gray);
+  background-color: #f0f1f6;
   padding-inline: 6.667vw;
 }
