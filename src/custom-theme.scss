@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,24 +11,140 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$url-shortening-api-landing-page-primary: mat.define-palette(mat.$indigo-palette);
-$url-shortening-api-landing-page-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$url-shortening-api-landing-page-primary: mat.define-palette(
+  mat.$indigo-palette
+);
+$url-shortening-api-landing-page-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
 
 // The warn palette is optional (defaults to red).
 $url-shortening-api-landing-page-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$url-shortening-api-landing-page-theme: mat.define-light-theme((
-  color: (
-    primary: $url-shortening-api-landing-page-primary,
-    accent: $url-shortening-api-landing-page-accent,
-    warn: $url-shortening-api-landing-page-warn,
+$url-shortening-api-landing-page-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $url-shortening-api-landing-page-primary,
+      accent: $url-shortening-api-landing-page-accent,
+      warn: $url-shortening-api-landing-page-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($url-shortening-api-landing-page-theme);
 
+.dark-violet-red {
+  $dark-violet-palette: (
+    50: #ebebf1,
+    100: #cccdde,
+    200: #acadc7,
+    300: #8e8daf,
+    400: #77739e,
+    500: #625b8e,
+    600: #5b5385,
+    700: #524979,
+    800: #4a406c,
+    900: #3b3054,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: black,
+      600: black,
+      700: black,
+      800: black,
+      900: white,
+    ),
+  );
+
+  $dark-violet-red-primary: mat.define-palette($dark-violet-palette, 900);
+
+  $red-palette: (
+    50: #ffedf0,
+    100: #ffd2d8,
+    200: #f0a2a4,
+    300: #e87f81,
+    400: #f46262,
+    500: #f9544b,
+    600: #eb4c4a,
+    700: #d94343,
+    800: #cc3d3c,
+    900: #bd3330,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    ),
+  );
+
+  $dark-violet-red-warn: mat.define-palette($red-palette, 400);
+
+  $dark-violet-red-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $dark-violet-red-primary,
+        accent: $url-shortening-api-landing-page-accent,
+        warn: $dark-violet-red-warn,
+      ),
+    )
+  );
+
+  @include mat.form-field-color($dark-violet-red-theme);
+}
+
+.cyan {
+  $cyan-palette: (
+    50: #def7f6,
+    100: #acebe8,
+    200: #74dddb,
+    300: #2acfcf,
+    400: #00c5c7,
+    500: #00bac2,
+    600: #00aab0,
+    700: #009597,
+    800: #008180,
+    900: #005e57,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    ),
+  );
+
+  $cyan-primary: mat.define-palette($cyan-palette, 300);
+
+  $cyan-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $cyan-primary,
+        accent: $url-shortening-api-landing-page-accent,
+      ),
+    )
+  );
+
+  @include mat.button-color($cyan-theme);
+}

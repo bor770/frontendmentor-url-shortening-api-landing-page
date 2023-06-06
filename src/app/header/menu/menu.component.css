@@ -1,9 +1,7 @@
-a,
-button {
-  font: inherit;
+a {
   font-weight: 700;
 }
 
-a {
+.sign {
   background-color: var(--color-primary-cyan);
 }

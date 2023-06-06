@@ -13,7 +13,7 @@ body {
 
 html {
   --color-primary-cyan: hsl(180, 66%, 49%);
-  --color-primary-dark-violet: hsl(257, 27%, 26%);
+  --color-primary-dark-violet: hsl(258, 27%, 26%);
 
   --color-secondary-red: hsl(0, 87%, 67%);
 
@@ -21,9 +21,11 @@ html {
   --color-neutral-grayish-violet: hsl(257, 7%, 63%);
   --color-neutral-very-dark-blue: hsl(255, 11%, 22%);
   --color-neutral-very-dark-violet: hsl(260, 8%, 14%);
+  overflow: hidden;
 }
 
 body {
   font-family: "Poppins", Roboto, "Helvetica Neue", sans-serif;
   font-weight: 500;
+  text-align: center;
 }

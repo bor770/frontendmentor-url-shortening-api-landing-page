@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  transform: translateY(-4.9rem);
+}
+
+.shorten {
+  background-color: var(--color-primary-dark-violet);
+  background-image: url(../../assets/images/bg-shorten-mobile.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 11.35rem;
+  justify-content: space-between;
+  padding: 1.562rem;
+}
+
+.label {
+  color: var(--color-secondary-red);
+}
+
+.shorten-button {
+  font: inherit;
+  font-weight: 700;
+}

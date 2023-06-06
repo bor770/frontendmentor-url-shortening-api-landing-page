@@ -1,3 +1,9 @@
 header {
+  margin-bottom: 0.7rem;
   padding-top: 1.8rem;
+}
+
+.middle {
+  background-color: var(--color-neutral-gray);
+  padding-inline: 6.667vw;
 }
