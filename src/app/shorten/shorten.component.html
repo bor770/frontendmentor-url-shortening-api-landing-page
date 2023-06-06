@@ -3,15 +3,15 @@
 >
   <form [formGroup]="form" (ngSubmit)="onShorten()">
     <section class="shorten">
-      <div class="dark-violet-red">
+      <div class="dark-violet-red-form-field">
         <mat-form-field hideRequiredMarker>
           <mat-label class="label">Shorten a link here...</mat-label>
           <input matInput formControlName="originalLink" type="text" />
           <mat-error>Please add a link</mat-error>
         </mat-form-field>
       </div>
-      <div class="cyan">
-        <button class="shorten-button" mat-flat-button color="primary">
+      <div class="cyan-button">
+        <button class="button" mat-flat-button color="primary">
           Shorten It!
         </button>
       </div>
@@ -22,14 +22,24 @@
           <span class="original">{{ link.originalLink }}</span>
           <mat-divider></mat-divider>
           <span class="short">{{ link.shortLink }}</span>
-          <button
-            mat-flat-button
-            type="button"
-            [cdkCopyToClipboard]="link.shortLink"
-            (click)="onCopy(i)"
+          <div
+            class="copy-button-container"
+            [ngClass]="{
+              'dark-violet-button': i === observables.copied,
+              'cyan-button': i !== observables.copied
+            }"
           >
-            {{ i === observables.copied ? "Copied" : "Copy" }}
-          </button>
+            <button
+              class="button"
+              mat-flat-button
+              color="primary"
+              type="button"
+              [cdkCopyToClipboard]="link.shortLink"
+              (click)="onCopy(i)"
+            >
+              {{ i === observables.copied ? "Copied" : "Copy" }}
+            </button>
+          </div>
         </li>
       </ul>
     </section>

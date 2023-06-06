@@ -41,7 +41,7 @@ $url-shortening-api-landing-page-theme: mat.define-light-theme(
 // that you are using.
 @include mat.all-component-themes($url-shortening-api-landing-page-theme);
 
-.dark-violet-red {
+.dark-violet-red-form-field {
   $dark-violet-palette: (
     50: #ebebf1,
     100: #cccdde,
@@ -109,7 +109,7 @@ $url-shortening-api-landing-page-theme: mat.define-light-theme(
   @include mat.form-field-color($dark-violet-red-theme);
 }
 
-.cyan {
+.cyan-button {
   $cyan-palette: (
     50: #def7f6,
     100: #acebe8,
@@ -147,4 +147,44 @@ $url-shortening-api-landing-page-theme: mat.define-light-theme(
   );
 
   @include mat.button-color($cyan-theme);
+}
+
+.dark-violet-button {
+  $dark-violet-palette: (
+    50: #ebebf1,
+    100: #cccdde,
+    200: #acadc7,
+    300: #8e8daf,
+    400: #77739e,
+    500: #625b8e,
+    600: #5b5385,
+    700: #524979,
+    800: #4a406c,
+    900: #3b3054,
+    contrast: (
+      50: black,
+      100: black,
+      200: black,
+      300: black,
+      400: black,
+      500: black,
+      600: black,
+      700: black,
+      800: black,
+      900: white,
+    ),
+  );
+
+  $dark-violet-primary: mat.define-palette($dark-violet-palette, 900);
+
+  $dark-violet-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $dark-violet-primary,
+        accent: $url-shortening-api-landing-page-accent,
+      ),
+    )
+  );
+
+  @include mat.button-color($dark-violet-theme);
 }
