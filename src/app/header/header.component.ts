@@ -15,13 +15,13 @@ import { MenuComponent } from './menu/menu.component';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit {
-  isXSmall$: Observable<boolean>;
+  isMinLarge$: Observable<boolean>;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit(): void {
-    this.isXSmall$ = this.breakpointObserver
-      .observe([Breakpoints.XSmall])
+    this.isMinLarge$ = this.breakpointObserver
+      .observe([Breakpoints.Large, Breakpoints.XLarge])
       .pipe(map((result) => result.matches));
   }
 }

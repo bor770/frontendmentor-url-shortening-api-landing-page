@@ -5,6 +5,15 @@ header {
 
 .middle {
   background-color: #f0f1f6;
-  padding-inline: 6.667vw;
-  padding: 0 6.667vw 5rem;
+  padding: 0 var(--padding-inline-mobile) 5rem;
+}
+
+@media (min-width: 80rem) {
+  header {
+    padding-top: 2.45rem;
+  }
+
+  .middle {
+    padding-inline: var(--padding-inline-desktop);
+  }
 }

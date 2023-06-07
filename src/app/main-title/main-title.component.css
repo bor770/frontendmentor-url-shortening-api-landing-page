@@ -1,7 +1,7 @@
 :host {
   display: block;
   margin-bottom: 11rem;
-  padding-inline: 6.667vw;
+  padding-inline: var(--padding-inline-mobile);
 }
 
 img {
@@ -28,4 +28,10 @@ p {
 a {
   background-color: var(--color-primary-cyan);
   font-weight: 700;
+}
+
+@media (min-width: 80rem) {
+  :host {
+    padding-inline: var(--padding-inline-desktop);
+  }
 }

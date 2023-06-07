@@ -1,12 +1,12 @@
-<ng-container *ngIf="{ isXSmall: isXSmall$ | async } as observables">
+<ng-container *ngIf="{ isMinLarge: isMinLarge$ | async } as observables">
   <mat-toolbar class="toolbar">
     <img src="../../assets/images/logo.svg" alt="Logo" />
-    <a *ngIf="!observables.isXSmall">Features</a>
-    <a *ngIf="!observables.isXSmall">Prices</a>
-    <a *ngIf="!observables.isXSmall">Resources</a>
+    <a *ngIf="observables.isMinLarge" class="link">Features</a>
+    <a *ngIf="observables.isMinLarge" class="link">Pricing</a>
+    <a *ngIf="observables.isMinLarge" class="link">Resources</a>
     <span class="spacer"></span>
-    <a *ngIf="!observables.isXSmall">Login</a>
-    <a *ngIf="!observables.isXSmall" extended mat-fab>Sign Up</a>
-    <app-menu *ngIf="observables.isXSmall"></app-menu>
+    <a *ngIf="observables.isMinLarge" class="link">Login</a>
+    <a *ngIf="observables.isMinLarge" class="sign" extended mat-fab>Sign Up</a>
+    <app-menu *ngIf="!observables.isMinLarge"></app-menu>
   </mat-toolbar>
 </ng-container>

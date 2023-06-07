@@ -22,6 +22,9 @@ html {
   --color-neutral-very-dark-blue: hsl(255, 11%, 22%);
   --color-neutral-very-dark-violet: hsl(260, 8%, 14%);
 
+  --padding-inline-mobile: 6.667vw;
+  --padding-inline-desktop: 11.458vw;
+
   overflow-x: hidden;
 }
 

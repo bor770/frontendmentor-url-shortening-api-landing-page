@@ -1,12 +1,40 @@
 :host {
   display: block;
-  padding-left: 2vw;
+  padding-left: calc(var(--padding-inline-mobile) - 16px);
 }
 
 .toolbar {
   background-color: white;
 }
 
+img {
+  margin-right: 2.85rem;
+}
+
+.link {
+  color: var(--color-neutral-grayish-violet);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-right: 1.9rem;
+}
+
+.link:hover {
+  color: var(--color-neutral-very-dark-violet);
+}
+
 .spacer {
   flex: 1 1 auto;
+}
+
+.sign {
+  background-color: var(--color-primary-cyan);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+@media (min-width: 80rem) {
+  :host {
+    padding-inline: calc(var(--padding-inline-desktop) - 16px);
+  }
 }
