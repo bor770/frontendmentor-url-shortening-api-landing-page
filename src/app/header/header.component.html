@@ -1,5 +1,12 @@
-<mat-toolbar class="toolbar">
-  <img src="../../assets/images/logo.svg" alt="Logo" />
-  <span class="spacer"></span>
-  <app-menu></app-menu>
-</mat-toolbar>
+<ng-container *ngIf="{ isXSmall: isXSmall$ | async } as observables">
+  <mat-toolbar class="toolbar">
+    <img src="../../assets/images/logo.svg" alt="Logo" />
+    <a *ngIf="!observables.isXSmall">Features</a>
+    <a *ngIf="!observables.isXSmall">Prices</a>
+    <a *ngIf="!observables.isXSmall">Resources</a>
+    <span class="spacer"></span>
+    <a *ngIf="!observables.isXSmall">Login</a>
+    <a *ngIf="!observables.isXSmall" extended mat-fab>Sign Up</a>
+    <app-menu *ngIf="observables.isXSmall"></app-menu>
+  </mat-toolbar>
+</ng-container>
