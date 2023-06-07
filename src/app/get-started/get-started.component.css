@@ -19,3 +19,14 @@ a {
   font-size: 1.2rem;
   font-weight: 700;
 }
+
+@media (min-width: 80rem) {
+  :host {
+    background-image: url(../../assets/images/bg-boost-desktop.svg);
+    height: 15.625rem;
+  }
+
+  h2 {
+    font-size: 2.35rem;
+  }
+}

@@ -48,3 +48,10 @@
   filter: invert(7%) sepia(76%) saturate(1917%) hue-rotate(119deg)
     brightness(90%) contrast(78%);
 }
+
+@media (min-width: 80rem) {
+  :host {
+    height: 19.375rem;
+    overflow: hidden;
+  }
+}
