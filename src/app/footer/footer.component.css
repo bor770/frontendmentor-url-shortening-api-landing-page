@@ -10,6 +10,10 @@
   margin-bottom: 2.35rem;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .links-section {
   margin-bottom: 2.3rem;
 }
@@ -41,7 +45,6 @@
 .social-icons {
   display: flex;
   justify-content: center;
-  list-style-type: none;
 }
 
 .icon-a:hover {
@@ -51,7 +54,31 @@
 
 @media (min-width: 80rem) {
   :host {
+    align-items: flex-start;
+    display: flex;
     height: 19.375rem;
+    padding: 4.4rem 9.6rem 0 10.25rem;
+    text-align: left;
+
     overflow: hidden;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto 5.6rem;
+    width: 28.75rem;
+  }
+
+  .links-section:nth-child(2) {
+    margin-right: 1.5rem;
+  }
+
+  .title {
+    font-weight: 700;
+  }
+
+  .social-icons {
+    margin-top: -0.7rem;
   }
 }
