@@ -64,6 +64,7 @@ li:last-child {
 
 @media (min-width: 80rem) {
   :host {
+    margin-bottom: 2rem;
     transform: translateY(-5.312rem);
   }
 
