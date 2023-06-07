@@ -82,12 +82,19 @@ li:last-child {
   }
 
   .link {
+    align-items: center;
     display: flex;
+    font-size: 1.25rem;
     height: 4.327rem;
-    padding-inline: 1.875rem 1.562rem;
+    padding-left: 1.875rem;
   }
 
   .original {
+    margin-right: auto;
     padding: 0;
+  }
+
+  .copy-button-container {
+    margin-inline: 1.562rem;
   }
 }
