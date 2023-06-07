@@ -1,5 +1,9 @@
 <ng-container
-  *ngIf="{ copied: copied$ | async, links: links$ | async } as observables"
+  *ngIf="{
+    copied: copied$ | async,
+    links: links$ | async,
+    isMinLarge: isMinLarge$ | async
+  } as observables"
 >
   <form [formGroup]="form" (ngSubmit)="onShorten()">
     <section class="shorten">
@@ -18,9 +22,9 @@
     </section>
     <section class="links">
       <ul>
-        <li *ngFor="let link of observables.links; let i = index">
+        <li *ngFor="let link of observables.links; let i = index" class="link">
           <span class="original">{{ link.originalLink }}</span>
-          <mat-divider></mat-divider>
+          <mat-divider *ngIf="!observables.isMinLarge"></mat-divider>
           <span class="short">{{ link.shortLink }}</span>
           <div
             class="copy-button-container"

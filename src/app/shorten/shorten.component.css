@@ -61,3 +61,33 @@ li:last-child {
   height: 3.7rem;
   text-align: center;
 }
+
+@media (min-width: 80rem) {
+  :host {
+    transform: translateY(-5.312rem);
+  }
+
+  .shorten {
+    align-items: center;
+    background-image: url(../../assets/images/bg-shorten-desktop.svg);
+    flex-direction: row;
+    height: 10.625rem;
+    justify-content: space-evenly;
+    padding: 3.125rem 4.062rem;
+  }
+
+  .dark-violet-red-form-field,
+  .cyan-button {
+    height: fit-content;
+  }
+
+  .link {
+    display: flex;
+    height: 4.327rem;
+    padding-inline: 1.875rem 1.562rem;
+  }
+
+  .original {
+    padding: 0;
+  }
+}
