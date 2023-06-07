@@ -5,6 +5,41 @@
   padding-top: 3.5rem;
 }
 
-img {
+.logo {
   filter: brightness(0) invert(1);
+  margin-bottom: 2.35rem;
+}
+
+.links-section {
+  margin-bottom: 2.3rem;
+}
+
+.links-section:last-child {
+  margin-bottom: 1.8rem;
+}
+
+.title {
+  color: white;
+  display: block;
+  margin-bottom: 1.3rem;
+}
+
+.link-li {
+  margin-bottom: 0.5rem;
+}
+
+.link {
+  color: var(--color-neutral-gray);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.link:hover {
+  color: var(--color-primary-cyan);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
 }
