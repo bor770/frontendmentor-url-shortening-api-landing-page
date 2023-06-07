@@ -48,4 +48,28 @@ li:last-child {
     margin: 0 auto 6.25rem;
     width: 32rem;
   }
+
+  ul {
+    column-gap: 1.875rem;
+    display: grid;
+    grid-template-areas:
+      "brand .        .    "
+      "brand detailed .    "
+      "brand detailed fully"
+      ".     detailed fully"
+      ".     .        fully";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2.812rem 2.812rem 1fr 2.812rem 2.812rem;
+    height: 22.5rem;
+  }
+
+  ul::after {
+    height: 8px;
+    top: auto;
+    width: 100%;
+  }
+
+  li {
+    margin: 0;
+  }
 }

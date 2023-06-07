@@ -3,8 +3,11 @@
   Track how your links are performing across the web with our advanced
   statistics dashboard.
 </p>
-<ul class="features">
-  <li *ngFor="let feature of features">
+<ul>
+  <li
+    *ngFor="let feature of features"
+    [ngStyle]="{ gridArea: feature.title.split(' ')[0].toLowerCase() }"
+  >
     <app-feature [feature]="feature"></app-feature>
   </li>
 </ul>
