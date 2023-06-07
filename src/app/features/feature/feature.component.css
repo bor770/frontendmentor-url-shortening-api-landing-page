@@ -24,3 +24,19 @@ h3 {
 p {
   color: var(--color-neutral-grayish-violet);
 }
+
+@media (min-width: 80rem) {
+  :host {
+    padding-left: 2.187rem;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
