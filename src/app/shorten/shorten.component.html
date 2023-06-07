@@ -1,51 +1,17 @@
-<ng-container
-  *ngIf="{
-    copied: copied$ | async,
-    links: links$ | async,
-    isMinLarge: isMinLarge$ | async
-  } as observables"
->
-  <form [formGroup]="form" (ngSubmit)="onShorten()">
-    <section class="shorten">
-      <div class="dark-violet-red-form-field">
-        <mat-form-field hideRequiredMarker>
-          <mat-label class="label">Shorten a link here...</mat-label>
-          <input matInput formControlName="originalLink" type="text" />
-          <mat-error>Please add a link</mat-error>
-        </mat-form-field>
-      </div>
-      <div class="cyan-button">
-        <button class="button" mat-flat-button color="primary">
-          Shorten It!
-        </button>
-      </div>
-    </section>
-    <section class="links">
-      <ul>
-        <li *ngFor="let link of observables.links; let i = index" class="link">
-          <span class="original">{{ link.originalLink }}</span>
-          <mat-divider *ngIf="!observables.isMinLarge"></mat-divider>
-          <span class="short">{{ link.shortLink }}</span>
-          <div
-            class="copy-button-container"
-            [ngClass]="{
-              'dark-violet-button': i === observables.copied,
-              'cyan-button': i !== observables.copied
-            }"
-          >
-            <button
-              class="button"
-              mat-flat-button
-              color="primary"
-              type="button"
-              [cdkCopyToClipboard]="link.shortLink"
-              (click)="onCopy(i)"
-            >
-              {{ i === observables.copied ? "Copied!" : "Copy" }}
-            </button>
-          </div>
-        </li>
-      </ul>
-    </section>
-  </form>
-</ng-container>
+<form [formGroup]="form" (ngSubmit)="onShorten()">
+  <section class="shorten">
+    <div class="dark-violet-red-form-field">
+      <mat-form-field hideRequiredMarker>
+        <mat-label class="label">Shorten a link here...</mat-label>
+        <input matInput formControlName="originalLink" type="text" />
+        <mat-error>Please add a link</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="cyan-button">
+      <button class="button" mat-flat-button color="primary" type="submit">
+        Shorten It!
+      </button>
+    </div>
+  </section>
+</form>
+<app-links></app-links>

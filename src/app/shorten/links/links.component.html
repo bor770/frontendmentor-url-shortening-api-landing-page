@@ -1,0 +1,34 @@
+<ng-container
+  *ngIf="{
+    copied: copied$ | async,
+    links: links$ | async,
+    isMinLarge: isMinLarge$ | async
+  } as observables"
+>
+  <form>
+    <ul>
+      <li *ngFor="let link of observables.links; let i = index">
+        <span class="original">{{ link.originalLink }}</span>
+        <mat-divider *ngIf="!observables.isMinLarge"></mat-divider>
+        <span class="short">{{ link.shortLink }}</span>
+        <div
+          class="copy-button-container"
+          [ngClass]="{
+            'dark-violet-button': i === observables.copied,
+            'cyan-button': i !== observables.copied
+          }"
+        >
+          <button
+            mat-flat-button
+            color="primary"
+            type="button"
+            [cdkCopyToClipboard]="link.shortLink"
+            (click)="onCopy(i)"
+          >
+            {{ i === observables.copied ? "Copied!" : "Copy" }}
+          </button>
+        </div>
+      </li>
+    </ul>
+  </form>
+</ng-container>
