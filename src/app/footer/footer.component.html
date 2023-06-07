@@ -11,11 +11,8 @@
 </ul>
 <ul class="social-icons">
   <li *ngFor="let icon of socialIcons">
-    <a mat-icon-button>
-      <!-- <mat-icon [svgIcon]="icon"></mat-icon> -->
-      <div class="icon-wrapper">
-        <img [src]="'../../assets/images/icon-' + icon + '.svg'" [alt]="icon" />
-      </div>
+    <a mat-icon-button class="icon-a">
+      <img [src]="'../../assets/images/icon-' + icon + '.svg'" [alt]="icon" />
     </a>
   </li>
 </ul>
