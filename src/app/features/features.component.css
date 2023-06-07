@@ -11,5 +11,28 @@ p {
 }
 
 ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
+  position: relative;
+}
+
+ul::after {
+  background-color: var(--color-primary-cyan);
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 8px;
+}
+
+li {
+  margin-bottom: 5.7rem;
+  position: relative;
+  z-index: 2;
+}
+
+li:last-child {
+  margin-bottom: 0;
 }

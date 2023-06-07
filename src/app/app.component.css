@@ -6,4 +6,5 @@ header {
 .middle {
   background-color: #f0f1f6;
   padding-inline: 6.667vw;
+  padding: 0 6.667vw 5rem;
 }
