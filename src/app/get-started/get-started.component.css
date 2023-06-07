@@ -1,0 +1,21 @@
+:host {
+  align-items: center;
+  background-color: var(--color-primary-dark-violet);
+  background-image: url(../../assets/images/bg-boost-mobile.svg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  height: 18.75rem;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  font-size: 1.65rem;
+}
+
+a {
+  background-color: var(--color-primary-cyan);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
