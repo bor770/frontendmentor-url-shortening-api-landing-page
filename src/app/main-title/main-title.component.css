@@ -7,6 +7,7 @@
 img {
   height: 20.937rem;
   margin-bottom: 2.3rem;
+  order: 1;
 }
 
 h1 {
@@ -32,6 +33,30 @@ a {
 
 @media (min-width: 80rem) {
   :host {
-    padding-inline: var(--padding-inline-desktop);
+    padding-inline: var(--padding-inline-desktop) 0;
+    display: flex;
+    gap: 6.2rem;
+    margin-bottom: 7.2rem;
+    text-align: left;
+  }
+
+  img {
+    height: auto;
+  }
+
+  .text {
+    flex-shrink: 0;
+    margin-top: 4.4rem;
+    width: 35.312rem;
+  }
+
+  h1 {
+    font-size: 4.9rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.35rem;
+    margin-bottom: 2.15rem;
   }
 }
