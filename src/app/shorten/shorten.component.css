@@ -95,6 +95,11 @@ li:last-child {
   }
 
   .copy-button-container {
-    margin-inline: 1.562rem;
+    height: auto;
+    width: 9.687rem;
+  }
+
+  .button {
+    font-size: 1rem;
   }
 }
