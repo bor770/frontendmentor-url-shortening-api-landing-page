@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "frontendmentor-url-shortening": {
+      "hosting": {
+        "url-shortening-api-landing-page": [
+          "frontendmentor-url-shortening"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "frontendmentor-url-shortening"
+  }
+}

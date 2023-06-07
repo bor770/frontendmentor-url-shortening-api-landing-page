@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "url-shortening-api-landing-page",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

@@ -129,6 +129,13 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "url-shortening-api-landing-page:build:production"
+          }
         }
       }
     }
