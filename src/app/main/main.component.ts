@@ -5,10 +5,16 @@ import { LetDirective } from '@ngrx/component';
 
 import { BaseComponent } from '../shared/base/base.component';
 import { GetStartedButtonComponent } from './get-started-button/get-started-button.component';
+import { ShortenComponent } from './shorten/shorten.component';
 import { Width } from '../shared/layout/layout.model';
 
 @Component({
-  imports: [CommonModule, LetDirective, GetStartedButtonComponent],
+  imports: [
+    CommonModule,
+    LetDirective,
+    GetStartedButtonComponent,
+    ShortenComponent,
+  ],
   selector: 'app-main',
   standalone: true,
   styleUrls: [
@@ -19,10 +25,6 @@ import { Width } from '../shared/layout/layout.model';
   templateUrl: './main.component.html',
 })
 export class MainComponent extends BaseComponent {
-  imgSrcCloud(width: Width) {
-    return `url(../../assets/images/cloud-${width}.svg)`;
-  }
-
   imgSrcWorking(width: Width) {
     return `../../assets/images/working-${width}.svg`;
   }

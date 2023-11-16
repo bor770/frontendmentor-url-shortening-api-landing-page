@@ -6,8 +6,9 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './get-started-button.component.html',
-  styleUrl: './get-started-button.component.css'
+  styleUrls: [
+    './get-started-button.component.css',
+    `../../shared/styles/button/button.css`,
+  ],
 })
-export class GetStartedButtonComponent {
-
-}
+export class GetStartedButtonComponent {}

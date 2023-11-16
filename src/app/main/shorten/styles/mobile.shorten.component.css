@@ -1,0 +1,37 @@
+.mobile {
+  margin-inline: 1.5rem;
+}
+
+.mobile form {
+  background-image: url(../../../../assets/images/bg-shorten-mobile.svg);
+  padding: 1.5rem;
+}
+
+.mobile .input {
+  margin-bottom: 1rem;
+}
+
+.mobile .ng-invalid.ng-submitted .input::after {
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0.08px;
+  margin-top: 4px;
+}
+
+.mobile input {
+  border-radius: 5px;
+  height: 3rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.mobile input::placeholder {
+  letter-spacing: 0.12px;
+}
+
+.mobile button {
+  border-radius: 5px;
+  font-size: 1.12rem;
+  height: 3rem;
+  width: 100%;
+}

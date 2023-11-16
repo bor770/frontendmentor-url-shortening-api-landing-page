@@ -1,1 +1,12 @@
-<p>shorten works!</p>
+<div *ngrxLet="width$ as width" [ngClass]="width">
+  <form [formGroup]="form">
+    <div class="input">
+      <input
+        formControlName="url"
+        placeholder="Shorten a link here..."
+        type="text"
+      />
+    </div>
+    <button type="submit">Shorten It!</button>
+  </form>
+</div>

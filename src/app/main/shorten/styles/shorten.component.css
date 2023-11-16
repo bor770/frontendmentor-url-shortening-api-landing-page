@@ -1,0 +1,42 @@
+form {
+  background-color: #3a3054;
+  background-position: right top;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.ng-invalid.ng-submitted .input::after {
+  color: #f46363;
+  content: "Please add a link";
+  display: block;
+  font-style: italic;
+}
+
+input {
+  border: none;
+  display: block;
+  font: inherit;
+  outline: none;
+}
+
+.ng-submitted input.ng-invalid {
+  border: 3px solid #f46363;
+}
+
+input::placeholder {
+  color: #34313d;
+  opacity: 0.5;
+}
+
+.ng-submitted input.ng-invalid::placeholder {
+  color: #f46363;
+}
+
+button {
+  background: #2bd0d0;
+  display: block;
+}
+
+button:hover {
+  background: #9ae3e3;
+}

@@ -1,5 +1,5 @@
 <div *ngrxLet="width$ as width" [ngClass]="width">
-  <section class="more" [ngStyle]="{ backgroundImage: imgSrcCloud(width) }">
+  <section class="more">
     <img
       alt="Working Illustration"
       class="working"
@@ -14,4 +14,5 @@
       <app-get-started-button></app-get-started-button>
     </div>
   </section>
+  <app-shorten></app-shorten>
 </div>
