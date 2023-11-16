@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 form {
   background-color: #3a3054;
   background-position: right top;

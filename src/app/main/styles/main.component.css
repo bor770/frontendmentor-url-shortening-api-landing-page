@@ -10,3 +10,11 @@ h1 {
 p {
   color: #9e9aa8;
 }
+
+.shorten {
+  background: #eff1f7;
+}
+
+app-shorten {
+  transform: translateY(-5rem);
+}

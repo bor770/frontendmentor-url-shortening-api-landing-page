@@ -12,6 +12,7 @@ import { Subscription, distinctUntilChanged, filter } from 'rxjs';
 import { LetDirective } from '@ngrx/component';
 
 import { BaseComponent } from '../../shared/base/base.component';
+import * as ShortenActions from './store/shorten.actions';
 
 @Component({
   imports: [CommonModule, ReactiveFormsModule, LetDirective],
@@ -50,6 +51,16 @@ export class ShortenComponent
       .subscribe(() => {
         this.formGroupDirective.resetForm(form.value);
       });
+  }
+
+  onSubmit() {
+    const form = this.form;
+
+    if (form.valid) {
+      this.store.dispatch(ShortenActions.shorten({ url: form.value.url }));
+    }
+
+    this.formGroupDirective.resetForm();
   }
 
   ngOnDestroy(): void {
