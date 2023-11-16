@@ -1,6 +1,10 @@
 <div *ngrxLet="width$ as width" class="container" [ngClass]="width">
   <img alt="Logo" height="33" src="../../assets/images/logo.svg" width="121" />
-  <button *ngIf="width === 'mobile'">
+  <button
+    *ngIf="width === 'mobile'"
+    [cdkMenuPosition]="position"
+    [cdkMenuTriggerFor]="menu"
+  >
     <img
       alt="Menu Icon"
       class="menu-icon"
@@ -10,3 +14,7 @@
     />
   </button>
 </div>
+
+<ng-template #menu>
+  <app-mobile-menu cdkMenu [@menu]></app-mobile-menu>
+</ng-template>
