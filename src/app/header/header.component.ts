@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+
+import { LetDirective } from '@ngrx/component';
+
+import { BaseComponent } from '../shared/base/base.component';
 
 @Component({
+  imports: [CommonModule, LetDirective],
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  styleUrls: [
+    './styles/header.component.css',
+    `./styles/mobile.header.component.css`,
+    `./styles/desktop.header.component.css`,
+  ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent extends BaseComponent {}

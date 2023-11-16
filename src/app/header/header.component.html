@@ -1,1 +1,12 @@
-<p>header works!</p>
+<div *ngrxLet="width$ as width" class="container" [ngClass]="width">
+  <img alt="Logo" height="33" src="../../assets/images/logo.svg" width="121" />
+  <button *ngIf="width === 'mobile'">
+    <img
+      alt="Menu Icon"
+      class="menu-icon"
+      height="21"
+      src="../../assets/images/icon-menu.svg"
+      width="24"
+    />
+  </button>
+</div>
