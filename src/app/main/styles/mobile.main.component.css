@@ -1,0 +1,26 @@
+.mobile .more {
+  padding: 2.75rem 1.5rem 10.5rem;
+}
+
+.mobile .working {
+  display: block;
+  margin-bottom: 3.81rem;
+}
+
+.mobile .text {
+  text-align: center;
+}
+
+.mobile h1 {
+  font-size: 2.62rem;
+  line-height: 114.29%;
+  letter-spacing: -1.05px;
+  margin-bottom: 15px;
+}
+
+.mobile p {
+  font-size: 1.12rem;
+  line-height: 166.67%;
+  letter-spacing: 0.12px;
+  margin-bottom: 2rem;
+}

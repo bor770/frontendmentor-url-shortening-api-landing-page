@@ -1,1 +1,17 @@
-<p>main works!</p>
+<div *ngrxLet="width$ as width" [ngClass]="width">
+  <section class="more" [ngStyle]="{ backgroundImage: imgSrcCloud(width) }">
+    <img
+      alt="Working Illustration"
+      class="working"
+      [src]="imgSrcWorking(width)"
+    />
+    <div class="text">
+      <h1>More than just shorter links</h1>
+      <p>
+        Build your brand’s recognition and get detailed insights on how your
+        links are performing.
+      </p>
+      <app-get-started-button></app-get-started-button>
+    </div>
+  </section>
+</div>
