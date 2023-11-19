@@ -29,9 +29,42 @@
   letter-spacing: 0.12px;
 }
 
-.mobile button {
+.mobile .shorten-button {
   border-radius: 5px;
   font-size: 1.12rem;
   height: 3rem;
+  width: 100%;
+}
+
+.mobile ul {
+  gap: 1.5rem;
+}
+
+.mobile .original {
+  align-items: center;
+  display: flex;
+  height: 3rem;
+  letter-spacing: 0.12px;
+  padding-left: 1rem;
+}
+
+.mobile hr {
+  height: 1px;
+  border: none;
+  background: #9e9aa8;
+}
+
+.mobile .shortened {
+  padding: 6px 1rem 1rem;
+}
+
+.mobile .short {
+  display: block;
+  line-height: 225%;
+  letter-spacing: 0.12px;
+  margin-bottom: 8px;
+}
+
+.mobile .copy-button {
   width: 100%;
 }

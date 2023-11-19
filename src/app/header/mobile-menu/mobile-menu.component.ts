@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   imports: [CdkMenuModule, CommonModule],
   selector: 'app-mobile-menu',
   standalone: true,
-  styleUrl: './mobile-menu.component.css',
+  styleUrls: ['./mobile-menu.component.css', `../../shared/styles/button.css`],
   templateUrl: './mobile-menu.component.html',
 })
 export class MobileMenuComponent {}

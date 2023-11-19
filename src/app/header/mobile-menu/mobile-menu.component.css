@@ -8,12 +8,8 @@
 
 button {
   background: none;
-  border: none;
-  color: #fff;
   display: block;
-  font: inherit;
   font-size: 1.12rem;
-  font-weight: 700;
   margin-inline: auto;
 }
 
@@ -22,7 +18,9 @@ button {
 }
 
 hr {
-  border-color: #9e9aa8;
+  background: #9e9aa8;
+  border: none;
+  height: 1px;
   margin-bottom: 2rem;
   opacity: 0.25;
 }

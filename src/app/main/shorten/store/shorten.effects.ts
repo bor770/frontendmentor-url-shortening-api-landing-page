@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, of, switchMap } from 'rxjs';
+import { catchError, map, of, switchMap, tap } from 'rxjs';
 
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Actions, concatLatestFrom, createEffect, ofType } from '@ngrx/effects';
+import { Store } from '@ngrx/store';
 
-import { ApiResponse } from '../shorten.model';
 import { environment } from '../../../../environments/environment';
 import * as ShortenActions from './shorten.actions';
+import * as ShortenSelectors from './shorten.selectors';
 
 @Injectable()
 export class ShortenEffects {
@@ -15,11 +16,11 @@ export class ShortenEffects {
       ofType(ShortenActions.shorten),
       switchMap((action) =>
         this.http
-          .post<ApiResponse>(environment.apiUrl, { url: action.url })
+          .get(`${environment.apiUrl}${action.url}`, { responseType: `text` })
           .pipe(
             map((response) =>
               ShortenActions.add({
-                link: { original: action.url, short: response.result_url },
+                link: { original: action.url, short: response },
               })
             ),
             catchError(() => of())
@@ -28,5 +29,22 @@ export class ShortenEffects {
     );
   });
 
-  constructor(private actions$: Actions, private http: HttpClient) {}
+  add = createEffect(
+    () => {
+      return this.actions$.pipe(
+        ofType(ShortenActions.add),
+        concatLatestFrom(() => this.store.select(ShortenSelectors.selectLinks)),
+        tap(([, links]) => {
+          localStorage.setItem(`links`, JSON.stringify(links));
+        })
+      );
+    },
+    { dispatch: false }
+  );
+
+  constructor(
+    private actions$: Actions,
+    private http: HttpClient,
+    private store: Store
+  ) {}
 }

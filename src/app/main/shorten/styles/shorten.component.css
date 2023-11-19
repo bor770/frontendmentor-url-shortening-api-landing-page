@@ -7,6 +7,7 @@ form {
   background-position: right top;
   background-repeat: no-repeat;
   border-radius: 10px;
+  margin-bottom: 1.5rem;
 }
 
 .ng-invalid.ng-submitted .input::after {
@@ -38,9 +39,41 @@ input::placeholder {
 
 button {
   background: #2bd0d0;
-  display: block;
 }
 
 button:hover {
   background: #9ae3e3;
+}
+
+.shorten-button {
+  display: block;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+li {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.original {
+  color: #34313d;
+}
+
+.short {
+  color: #2bd0d0;
+}
+
+.copy-button {
+  border-radius: 5px;
+  height: 2.5rem;
+}
+
+.copied,
+.copied:hover {
+  background: #3a3054;
 }

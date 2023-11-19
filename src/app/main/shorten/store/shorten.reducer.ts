@@ -8,7 +8,10 @@ export interface State {
   links: Link[];
 }
 
-const initalState: State = { copied: null, links: [] };
+const initalState: State = {
+  copied: null,
+  links: JSON.parse(localStorage.getItem(`links`)) || [],
+};
 
 export const reducer = createReducer(
   initalState,

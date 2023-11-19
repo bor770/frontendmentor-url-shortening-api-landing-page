@@ -1,4 +1,7 @@
-<div *ngrxLet="width$ as width" [ngClass]="width">
+<div
+  *ngrxLet="{ copied: copied$, links: links$, width: width$ } as observables"
+  [ngClass]="observables.width"
+>
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="input">
       <input
@@ -7,6 +10,23 @@
         type="text"
       />
     </div>
-    <button type="submit">Shorten It!</button>
+    <button class="shorten-button" type="submit">Shorten It!</button>
   </form>
+  <ul>
+    <li *ngFor="let link of observables.links; let i = index">
+      <span class="original">{{ link.original }}</span>
+      <hr *ngIf="observables.width === 'mobile'" />
+      <div class="shortened" *ngrxLet="link.short as short">
+        <span class="short">{{ short }}</span>
+        <button
+          class="copy-button"
+          [cdkCopyToClipboard]="short"
+          [ngClass]="{ copied: observables.copied === i }"
+          (click)="onCopy(i)"
+        >
+          {{ buttonText(observables.copied, i) }}
+        </button>
+      </div>
+    </li>
+  </ul>
 </div>

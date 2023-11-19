@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './get-started-button.component.html',
   styleUrls: [
     './get-started-button.component.css',
-    `../../shared/styles/button/button.css`,
+    `../../shared/styles/button.css`,
   ],
 })
 export class GetStartedButtonComponent {}
