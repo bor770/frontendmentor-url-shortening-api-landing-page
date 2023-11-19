@@ -6,8 +6,8 @@
       [src]="imgSrcWorking(width)"
     />
     <div class="text">
-      <h1>More than just shorter links</h1>
-      <p>
+      <h2 class="more-heading">More than just shorter links</h2>
+      <p class="more-text">
         Build your brand’s recognition and get detailed insights on how your
         links are performing.
       </p>
@@ -16,5 +16,25 @@
   </section>
   <div class="shorten">
     <app-shorten></app-shorten>
+    <section class="statistics">
+      <h1>Advanced Statistics</h1>
+      <p class="statistics-text">
+        Track how your links are performing across the web with our advanced
+        statistics dashboard.
+      </p>
+      <ul>
+        <li *ngFor="let feature of features; let i = index">
+          <img
+            class="feature-icon"
+            height="88"
+            width="88"
+            [alt]="feature.heading"
+            [src]="imgSrcFeature(i)"
+          />
+          <h2 class="feature-heading">{{ feature.heading }}</h2>
+          <p class="feature-text">{{ feature.text }}</p>
+        </li>
+      </ul>
+    </section>
   </div>
 </div>
