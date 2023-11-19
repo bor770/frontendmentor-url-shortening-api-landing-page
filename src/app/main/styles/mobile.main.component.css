@@ -31,7 +31,7 @@
 }
 
 .mobile .shorten {
-  padding-inline: 1.5rem;
+  padding: 0 1.5rem 5rem;
 }
 
 .mobile app-shorten {
@@ -57,6 +57,24 @@
   gap: 5.75rem;
 }
 
+.mobile ul::after {
+  align-self: center;
+  height: 100%;
+  width: 8px;
+}
+
 .mobile .feature-text {
   line-height: 173.33%;
+}
+
+.mobile .boost {
+  background-image: url(../../../assets/images/bg-boost-mobile.svg);
+  gap: 1rem;
+  height: 18.75rem;
+}
+
+.mobile .boost-heading {
+  font-size: 1.75rem;
+  letter-spacing: -0.7px;
+  line-height: 171.43%;
 }

@@ -21,12 +21,20 @@ h1 {
 
 ul {
   list-style: none;
+  position: relative;
+}
+
+ul::after {
+  background: #2bd0d0;
+  content: "";
+  position: absolute;
 }
 
 li {
   background: #fff;
   border-radius: 5px;
   padding: 0 2rem 2.56rem;
+  z-index: 2;
 }
 
 .feature-icon {
@@ -40,4 +48,16 @@ li {
 
 .feature-text {
   font-size: 0.94rem;
+}
+
+.boost {
+  align-items: center;
+  background-color: #3a3054;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.boost-heading {
+  color: #fff;
 }
