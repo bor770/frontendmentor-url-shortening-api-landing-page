@@ -16,6 +16,6 @@ export const appConfig: ApplicationConfig = {
     provideEffects(LayoutEffects, ShortenEffects),
     provideHttpClient(),
     provideStore(rootReducer),
-    provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
+    provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() , connectInZone: true}),
   ],
 };
