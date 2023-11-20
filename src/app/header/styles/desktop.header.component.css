@@ -1,0 +1,72 @@
+.desktop {
+  align-items: center;
+  padding: 3rem 10.31rem 4.88rem 10.44rem;
+}
+
+.desktop .logo {
+  align-self: flex-end;
+  margin-right: 2.84rem;
+}
+
+.desktop nav {
+  display: contents;
+}
+
+.desktop .desktop-nav {
+  display: contents;
+}
+
+.desktop ul {
+  display: contents;
+  list-style: none;
+}
+
+.desktop li {
+  cursor: pointer;
+}
+
+.desktop .features {
+  margin-right: 1.81rem;
+}
+
+.desktop a {
+  color: #9e9aa8;
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.desktop a:hover {
+  color: #34313d;
+}
+
+.desktop .pricing {
+  margin-right: 2rem;
+}
+
+.desktop .resources {
+  margin-right: auto;
+}
+
+.desktop .login {
+  margin-right: 2.31rem;
+}
+
+.desktop .sign-up {
+  align-items: center;
+  background: #2bd0d0;
+  border-radius: 28px;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  width: 6.56rem;
+}
+
+.desktop .sign-up:hover {
+  background: #9ae3e3;
+}
+
+.desktop .sign-up-link,
+.desktop .sign-up-link:hover {
+  color: #fff;
+}

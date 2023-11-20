@@ -44,6 +44,7 @@ const TRANSLATE_X_ARGUMENT = `calc(100% + 1.5rem)`;
   templateUrl: './header.component.html',
 })
 export class HeaderComponent extends BaseComponent {
+  links = [`features`, `pricing`, `resources`, `login`, `sign up`];
   position: ConnectedPosition[] = [
     {
       offsetY: 23.33,
@@ -53,4 +54,12 @@ export class HeaderComponent extends BaseComponent {
       overlayY: `top`,
     },
   ];
+
+  liClass(link: string) {
+    return link.split(` `).join(`-`);
+  }
+
+  aClass(link: string) {
+    return `${this.liClass(link)}-link`;
+  }
 }

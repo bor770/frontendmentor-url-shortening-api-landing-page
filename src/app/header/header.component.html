@@ -1,18 +1,33 @@
 <div *ngrxLet="width$ as width" class="container" [ngClass]="width">
-  <img alt="Logo" height="33" src="../../assets/images/logo.svg" width="121" />
-  <button
-    *ngIf="width === 'mobile'"
-    [cdkMenuPosition]="position"
-    [cdkMenuTriggerFor]="menu"
-  >
-    <img
-      alt="Menu Icon"
-      class="menu-icon"
-      height="21"
-      src="../../assets/images/icon-menu.svg"
-      width="24"
-    />
-  </button>
+  <img
+    alt="Logo"
+    class="logo"
+    height="33"
+    src="../../assets/images/logo.svg"
+    width="121"
+  />
+  <nav>
+    <button
+      *ngIf="width === 'mobile'"
+      [cdkMenuPosition]="position"
+      [cdkMenuTriggerFor]="menu"
+    >
+      <img
+        alt="Menu Icon"
+        class="menu-icon"
+        height="21"
+        src="../../assets/images/icon-menu.svg"
+        width="24"
+      />
+    </button>
+    <div *ngIf="width === 'desktop'" class="desktop-nav">
+      <ul>
+        <li *ngFor="let link of links" [ngClass]="liClass(link)">
+          <a [ngClass]="aClass(link)">{{ link }}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 
 <ng-template #menu>
