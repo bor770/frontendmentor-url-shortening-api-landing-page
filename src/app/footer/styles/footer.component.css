@@ -11,6 +11,7 @@ h2 {
   font-size: 1rem;
   letter-spacing: -0.25px;
   margin-bottom: 1.38rem;
+  text-transform: capitalize;
 }
 
 .category-links {
@@ -34,6 +35,5 @@ a:hover {
   display: flex;
   height: 1.5rem;
   justify-content: space-between;
-  margin-inline: auto;
   width: 10.5rem;
 }

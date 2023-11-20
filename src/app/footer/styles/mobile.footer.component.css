@@ -14,3 +14,7 @@
   gap: 2.38rem;
   margin-bottom: 2.88rem;
 }
+
+.mobile .icons {
+  margin-inline: auto;
+}

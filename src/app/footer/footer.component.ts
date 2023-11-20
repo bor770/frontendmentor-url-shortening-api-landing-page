@@ -32,11 +32,11 @@ export class FooterComponent extends BaseComponent {
   icons = [`facebook`, `twitter`, `pinterest`, `instagram`];
   links: LinkCategory[] = [
     {
-      heading: `Features`,
+      heading: `features`,
       links: [`Link Shortening`, `Branded Links`, `Analytics`],
     },
-    { heading: `Resources`, links: [`Blog`, `Developers`, `Support`] },
-    { heading: `Company`, links: [`About`, `Our Team`, `Careers`, `Contact`] },
+    { heading: `resources`, links: [`Blog`, `Developers`, `Support`] },
+    { heading: `company`, links: [`About`, `Our Team`, `Careers`, `Contact`] },
   ];
 
   imgSrcIcon(icon: string) {

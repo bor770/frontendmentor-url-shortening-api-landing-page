@@ -1,0 +1,25 @@
+.desktop {
+  display: flex;
+  padding: 4.44rem 10.31rem 4.5rem 10.19rem;
+}
+
+.desktop img {
+  margin-right: 16.34rem;
+}
+
+.desktop nav {
+  display: contents;
+}
+
+.desktop .categories {
+  display: flex;
+  margin-right: 6.31rem;
+}
+
+.desktop .features {
+  margin-right: 4.88rem;
+}
+
+.desktop .resources {
+  margin-right: 6.62rem;
+}
