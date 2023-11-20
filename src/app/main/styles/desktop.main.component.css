@@ -1,0 +1,88 @@
+.desktop .more {
+  padding: 3.81rem 0 13.88rem 10.31rem;
+  position: relative;
+}
+
+.desktop .working {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.desktop .text {
+  width: 35.19rem;
+}
+
+.desktop .more-heading {
+  font-size: 5rem;
+  letter-spacing: -2px;
+  line-height: 112.5%;
+  margin-bottom: 5px;
+}
+
+.desktop .more-text {
+  font-size: 1.37rem;
+  letter-spacing: 0.15px;
+  line-height: 163.64%;
+  margin-bottom: 2.38rem;
+}
+
+.desktop .shorten {
+  padding: 0 10.31rem 7.5rem;
+}
+
+.desktop app-shorten {
+  margin-bottom: 2.25rem;
+  transform: translateY(-5.25rem);
+}
+
+.desktop h1 {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+  line-height: 120%;
+  margin-bottom: 1.12rem;
+  text-align: center;
+}
+
+.desktop .statistics-text {
+  font-size: 1.12rem;
+  letter-spacing: 0.12px;
+  line-height: 177.78%;
+  margin: 0 auto 6.25rem;
+  text-align: center;
+  width: 33.75rem;
+}
+
+.desktop ul {
+  gap: 1.87rem;
+  height: 22.19rem;
+}
+
+.desktop ul::after {
+  height: 8px;
+  width: 100%;
+}
+
+.desktop li {
+  height: 16.69rem;
+}
+
+.desktop .li-1 {
+  align-self: center;
+}
+
+.desktop .li-2 {
+  align-self: flex-end;
+}
+
+.desktop .boost {
+  background-image: url(../../../assets/images/bg-boost-desktop.svg);
+  gap: 2rem;
+  height: 15.62rem;
+}
+
+.desktop .boost-heading {
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+  line-height: 120%;
+}

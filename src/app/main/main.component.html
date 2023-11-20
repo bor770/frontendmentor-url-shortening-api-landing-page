@@ -23,7 +23,10 @@
         statistics dashboard.
       </p>
       <ul>
-        <li *ngFor="let feature of features; let i = index">
+        <li
+          *ngFor="let feature of features; let i = index"
+          [ngClass]="'li-' + i"
+        >
           <img
             class="feature-icon"
             height="88"

@@ -20,11 +20,13 @@ h1 {
 }
 
 ul {
+  display: flex;
   list-style: none;
   position: relative;
 }
 
 ul::after {
+  align-self: center;
   background: #2bd0d0;
   content: "";
   position: absolute;
@@ -48,11 +50,13 @@ li {
 
 .feature-text {
   font-size: 0.94rem;
+  line-height: 173.33%;
 }
 
 .boost {
   align-items: center;
   background-color: #3a3054;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

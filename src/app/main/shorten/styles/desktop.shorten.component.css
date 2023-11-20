@@ -1,0 +1,57 @@
+.desktop form {
+  background-image: url(../../../../assets/images/bg-shorten-desktop.svg);
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 3.25rem 4.06rem 3.25rem 4rem;
+}
+
+.desktop .ng-invalid.ng-submitted .input::after {
+  letter-spacing: 0.11px;
+  line-height: 112.5%;
+  margin-top: 8px;
+}
+
+.desktop input {
+  border-radius: 10px;
+  height: 4rem;
+  padding-left: 2rem;
+  width: 48.06rem;
+}
+
+.desktop input::placeholder {
+  font-size: 1.25rem;
+  letter-spacing: 0.15px;
+}
+
+.desktop .shorten-button {
+  border-radius: 10px;
+  font-size: 1.25rem;
+  height: 4rem;
+  width: 11.75rem;
+}
+
+.desktop ul {
+  gap: 1rem;
+}
+
+.desktop li {
+  align-items: center;
+  display: flex;
+  padding: 1rem 1.5rem 1rem 2rem;
+}
+
+.desktop .original {
+  font-size: 1.25rem;
+  letter-spacing: 0.15px;
+  margin-right: auto;
+}
+
+.desktop .short {
+  letter-spacing: 0.15px;
+  margin-right: 1.5rem;
+}
+
+.desktop .copy-button {
+  width: 6.44rem;
+}

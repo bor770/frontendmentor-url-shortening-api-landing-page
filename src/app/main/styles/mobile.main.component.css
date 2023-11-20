@@ -52,19 +52,13 @@
 }
 
 .mobile ul {
-  display: flex;
   flex-direction: column;
   gap: 5.75rem;
 }
 
 .mobile ul::after {
-  align-self: center;
   height: 100%;
   width: 8px;
-}
-
-.mobile .feature-text {
-  line-height: 173.33%;
 }
 
 .mobile .boost {
