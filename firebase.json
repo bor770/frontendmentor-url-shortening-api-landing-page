@@ -1,0 +1,9 @@
+{
+  "hosting": {
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "frameworksBackend": {
+      "region": "asia-east1"
+    },
+    "public": ".firebase/frontendmentor-url-shortenin/hosting/browser"
+  }
+}
