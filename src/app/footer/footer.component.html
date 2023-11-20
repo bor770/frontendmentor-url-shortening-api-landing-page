@@ -18,9 +18,24 @@
       </li>
     </ul>
     <ul class="icons">
-      <li *ngFor="let icon of icons">
+      <li>
         <a>
-          <img [alt]="icon + ' icon'" [src]="imgSrcIcon(icon)" />
+          <app-facebook></app-facebook>
+        </a>
+      </li>
+      <li>
+        <a>
+          <app-twitter></app-twitter>
+        </a>
+      </li>
+      <li>
+        <a>
+          <app-pinterest></app-pinterest>
+        </a>
+      </li>
+      <li>
+        <a>
+          <app-instagram></app-instagram>
         </a>
       </li>
     </ul>

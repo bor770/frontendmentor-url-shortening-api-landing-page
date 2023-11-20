@@ -4,10 +4,21 @@ import { Component } from '@angular/core';
 import { LetDirective } from '@ngrx/component';
 
 import { BaseComponent } from '../shared/base/base.component';
+import { FacebookComponent } from './facebook/facebook.component';
+import { InstagramComponent } from './instagram/instagram.component';
 import { LinkCategory } from './footer.model';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { TwitterComponent } from './twitter/twitter.component';
 
 @Component({
-  imports: [CommonModule, LetDirective],
+  imports: [
+    CommonModule,
+    LetDirective,
+    FacebookComponent,
+    InstagramComponent,
+    PinterestComponent,
+    TwitterComponent,
+  ],
   selector: 'app-footer',
   standalone: true,
   styleUrls: [
