@@ -1,13 +1,34 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+
+import { LetDirective } from '@ngrx/component';
+
+import { BaseComponent } from '../shared/base/base.component';
+import { LinkCategory } from './footer.model';
 
 @Component({
+  imports: [CommonModule, LetDirective],
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  styleUrls: [
+    './styles/footer.component.css',
+    `./styles/mobile.footer.component.css`,
+    `./styles/desktop.footer.component.css`,
+  ],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
 })
-export class FooterComponent {
+export class FooterComponent extends BaseComponent {
+  icons = [`facebook`, `twitter`, `pinterest`, `instagram`];
+  links: LinkCategory[] = [
+    {
+      heading: `Features`,
+      links: [`Link Shortening`, `Branded Links`, `Analytics`],
+    },
+    { heading: `Resources`, links: [`Blog`, `Developers`, `Support`] },
+    { heading: `Company`, links: [`About`, `Our Team`, `Careers`, `Contact`] },
+  ];
 
+  imgSrcIcon(icon: string) {
+    return `../../assets/images/icon-${icon}.svg`;
+  }
 }

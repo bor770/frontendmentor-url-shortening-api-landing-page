@@ -1,0 +1,16 @@
+.mobile {
+  padding-block: 3.38rem 3.5rem;
+  text-align: center;
+}
+
+.mobile .logo {
+  display: block;
+  margin: 0 auto 3.08rem;
+}
+
+.mobile .categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2.38rem;
+  margin-bottom: 2.88rem;
+}

@@ -1,1 +1,28 @@
-<p>footer works!</p>
+<div *ngrxLet="width$ as width" class="container" [ngClass]="width">
+  <img
+    alt="Logo"
+    class="logo"
+    height="33"
+    src="../../assets/images/logo-footer.svg"
+    width="121"
+  />
+  <nav>
+    <ul class="categories">
+      <li *ngFor="let category of links">
+        <h2>{{ category.heading }}</h2>
+        <ul class="category-links">
+          <li *ngFor="let link of category.links">
+            <a>{{ link }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="icons">
+      <li *ngFor="let icon of icons">
+        <a>
+          <img [alt]="icon + ' icon'" [src]="imgSrcIcon(icon)" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

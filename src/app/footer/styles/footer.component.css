@@ -1,0 +1,39 @@
+.container {
+  background: #232127;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.25px;
+  margin-bottom: 1.38rem;
+}
+
+.category-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+a {
+  color: #bfbfbf;
+  cursor: pointer;
+  font-size: 0.94rem;
+  letter-spacing: -0.23px;
+}
+
+a:hover {
+  color: #2bd0d0;
+}
+
+.icons {
+  display: flex;
+  height: 1.5rem;
+  justify-content: space-between;
+  margin-inline: auto;
+  width: 10.5rem;
+}
